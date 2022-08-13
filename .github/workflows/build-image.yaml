@@ -10,8 +10,14 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: usimd/pi-gen-action@v1
+        id: build
         with:
           image-name: sailingstats
           hostname: sailingstats
           enable-ssh: 1
           stage-list: stage0 stage1 stage2
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: pi-gen-image
+          path: ${{ steps.build.outputs.image-path }}
