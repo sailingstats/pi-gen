@@ -1,0 +1,16 @@
+name: Build Sailing Stats Raspberry Pi image
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-image:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: usimd/pi-gen-action@v1
+        with:
+          image-name: sailingstats
+          hostname: sailingstats
+          enable-ssh: 1
