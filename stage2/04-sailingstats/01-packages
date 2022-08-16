@@ -1,2 +1,4 @@
-network-manager
-nymea-networkmanager
+bluetooth
+bluez
+libbluetooth-dev
+libudev-dev
