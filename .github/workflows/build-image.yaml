@@ -19,6 +19,7 @@ jobs:
           disable-first-boot-user-rename: 1
           username: sailingstats
           password: R9#4Bg
+          verbose-output: true
 
       - uses: actions/upload-artifact@v3
         with:
